@@ -1,0 +1,13 @@
+
+<h1> Top Albums </h1>
+
+<div ng-app="app" ng-controller="MusicController as music">
+  <input ng-model="search"></input><button ng-click="searchRecord()">search</button>
+
+	<ul ng-repeat="album in music.data.topalbums.album | limitTo:3" >
+	 <h2> Name: {{ album.name }} </h2>
+  <img src={{album.image[2]["#text"]}} alt="">
+  <h4> Number of Plays on Last.fm: {{album.playcount.toLocaleString()}} </h4>
+  <h4><a href="{{album.url}}">Learn more</a></h4>
+  </ul>
+</div>
