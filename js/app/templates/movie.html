@@ -2,7 +2,7 @@
   <h2>Search for a Director Below</h2>
   <input ng-model="searchTerm"></input><button ng-click="testing()">search</button>
 
-  <ul ng-repeat="movie in film.reviews  ">
+  <ul ng-repeat="movie in film.reviews | ratingsFilter ">
     <h2>Title: {{ movie.data.title }}</h2>
     <h2>Rating: {{ movie.data.vote_average }}</h2>
   </ul>
