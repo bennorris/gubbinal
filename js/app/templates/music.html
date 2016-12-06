@@ -1,7 +1,8 @@
 
-<h1> Top Albums </h1>
+
 
 <div ng-app="app" ng-controller="MusicController as music">
+  <h1> Top Albums </h1>
   <input ng-model="search"></input><button ng-click="searchRecord()">search</button>
 
 	<ul ng-repeat="album in music.data.topalbums.album | limitTo:3" >

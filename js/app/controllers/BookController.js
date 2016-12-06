@@ -4,7 +4,7 @@ function BookController (Book) {
   Book
     .getAuthor()
     .then(function(resp) {
-      console.log(resp);
+      console.log(resp.data);
     })
 
 }
