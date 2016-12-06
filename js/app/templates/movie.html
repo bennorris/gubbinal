@@ -5,6 +5,12 @@
   <ul ng-repeat="movie in film.reviews | ratingsFilter ">
     <h2>Title: {{ movie.data.title }}</h2>
     <h2>Rating: {{ movie.data.vote_average }}</h2>
+    <button ng-click="showMore()">{{buttonText}}</button>
+    <div style="{{ moreInfo }}">
+    <p>Description: {{ movie.data.overview }}</p>
+    <p>Runtime: {{ movie.data.runtime }} minutes </p>
+    <p><a href="http://www.imdb.com/title/{{movie.data.imdb_id}}" target="_blank">IMDB link</a>
+    </div>
   </ul>
   <br>
 
