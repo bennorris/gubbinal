@@ -1,17 +1,24 @@
 function MovieController($scope, Movie) {
   var ctrl = this;
-  $scope.id = '';
+  $scope.searchTerm = '';
   $scope.searchId = '';
+  ctrl.data = [];
 
  $scope.testing = function() {
   Movie
-    .getDirectorId()
+    .getDirectorId($scope.searchTerm)
     .then(function(response) {
-      $scope.searchId = response.data.results[0].id
+      getMovies(response.data.results[0].id)
+      .then(function(res) {
+        ctrl.data = res.data;
+      })
     })
+}
+
+
   }
 
-}
+
 
 angular
   .module('app')

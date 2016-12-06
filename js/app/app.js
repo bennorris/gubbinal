@@ -15,6 +15,6 @@ angular
       .state('movies', {
         url: '/movies',
         templateUrl: 'js/app/templates/movie.html',
-        controller: MovieController
+        controller: 'MovieController'
       })
   })
