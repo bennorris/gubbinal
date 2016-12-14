@@ -4,12 +4,12 @@ angular
     $stateProvider
       .state('music',  {
         url: '/music',
-        templateUrl: 'js/app/templates/music.html',
+        templateUrl: 'app/assets/javascripts/angular/app/templates/music.html',
         controller: 'MusicController'
       })
       .state('books', {
         url: '/books',
-        templateUrl: 'js/app/templates/book.html',
+        templateUrl: 'app/javascripts/app/templates/book.html',
         controller: 'BookController'
       })
       .state('movies', {

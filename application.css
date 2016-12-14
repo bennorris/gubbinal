@@ -5,6 +5,17 @@ body {
   height: 100%;
 }
 
+nav li {
+  list-style-type: none;
+  float: left;
+  display: inline-block;
+  padding-right: 2%;
+  font-family: 'Brawler', serif;
+
+}
+
+/* MOVIE */
+
 
 #info-container {
   width: 100%;
@@ -44,6 +55,7 @@ h1 {
   width: 100%;
   padding: 0;
   margin: 0;
+  clear: both;
 }
 
 #movie-div input {
@@ -95,4 +107,27 @@ h1 {
   min-height: 450px;
   text-align: left;
   overflow: auto;
+}
+
+/* MUSIC */
+
+#music-div input {
+  font-family: 'Brawler', serif;
+  font-size: 40px;
+}
+
+#music-button {
+  font-family: 'Bevan', cursive;
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 2%;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+}
+
+#music-button:hover {
+  background-color: lightgray;
+  color: darkgreen;
+  border: 3px solid darkgreen;
 }
